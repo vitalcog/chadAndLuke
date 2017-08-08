@@ -8,7 +8,7 @@ fetch("http://jservice.io/api/random")
       response.json().then(function(data) {
         console.log(data);
         question =`<p> ${data[0].question} </p>`;
-        scoreBox = `<p> ${data[0].value}</p>`;
+        score = `${data[0].value}`;
         scoreBox.innerHTML = score;
         questionBox.innerHTML = question;
        });
