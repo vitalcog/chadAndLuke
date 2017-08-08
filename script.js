@@ -1,7 +1,11 @@
 
 let questionBox = document.getElementById('questionText');
+
 let scoreBox = document.getElementById('score')
+
 let catagoryBox = document.getElementById('catagory');
+
+// big ole' function...
 fetch("http://jservice.io/api/random")
   .then(
     function(response) {
