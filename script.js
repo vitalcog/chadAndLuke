@@ -20,6 +20,7 @@ fetch("http://jservice.io/api/random")
         question =`<p> ${data[0].question} </p>`;
         score = `${data[0].value}`;
         catagory = `${data[0].category.title}`;
+        //Added totalScore here, doesnt do anything but will need to be linked to submit buttin to cal. players total score
         totalScore = score + scoreBox.innerHTML;
         scoreBox.innerHTML = score;
         questionBox.innerHTML = question;
