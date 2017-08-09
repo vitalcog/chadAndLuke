@@ -10,8 +10,9 @@ body {
   margin-top: 3%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 0px;
   width: 50%;
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -20,15 +21,17 @@ body {
 }
 
 #scoreBox {
-  border: 2px solid black;
+  border: 10px solid black;
   display: flex;
-  align-self: center;
-  font-size: 1.5em;
-  width: 80%;
+  font-size: 4em;
+  width: 97%;
+  background: blue;
+  color: white;
+  height: 55%;
 }
 
 #scoreLabel {
-  border: 2px solid black;
+  //border: 2px solid black;
   text-align: right;
   width: 20%;
   height: 30px;
@@ -39,21 +42,23 @@ body {
   text-align: center;
   height: 30px;
   width: 40%;
+  margin-left: 150px;
 }
 
 input {
-  width: 75%;
+  width: 70%;
   height: 30px;
-  font-size: 1.4em;
+  font-size: 1.5em;
   align-self: center;
 }
 
 button {
   width: 25%;
-  height: 30px;
+  height: 80px;
   font-size: 1.4em;
   align-self: center;
   margin-bottom: 3%;
+  margin-top: 5px;
 }
 
 button:hover {
@@ -69,7 +74,24 @@ button:active {
 #questionText {
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 1.2em;
-  background-color: lightgray;
+  font-size: 1.5em;
+  background-color: blue;
   border-radius: 5px;
+  color: #f9da08;
+  border: 10px solid black;
+  margin: 0px 0px 40px;
+
+}
+h3 {
+  border: 10px solid black;
+  padding: 10px;
+  align-self: center;
+  color: white;
+  background: blue;
+  font-size: 2em;
+  margin: 0px;
+  width: 95%;
+}
+#points {
+  width: 95%;
 }
