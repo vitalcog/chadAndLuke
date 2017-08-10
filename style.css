@@ -29,28 +29,35 @@ body {
 }
 
 #scoreBox {
-  border: 1px solid black;
+  border-top: 8px solid brown;
+  border-bottom: 8px solid brown;
   display: flex;
   font-size: 2em;
-  width: 97%;
   background: blue;
   color: white;
-  height: 55%;
+
 
 }
 
 #scoreLabel {
-  border: 2px solid black;
-  text-align: right;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: yellow;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
   width: 20%;
-  height: 30px;
+  height: 40px;
 }
 
 #score {
-  border: 2px solid black;
-  text-align: center;
-  height: 30px;
-  width: 40%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: yellow;
+  font-weight: bold;
+  text-align: left;
+  height: 40px;
+  width: 50%;
 }
 
 input {
@@ -66,7 +73,7 @@ button {
   font-size: 1.4em;
   align-self: center;
   margin-bottom: 3%;
-  margin-top: 5px;
+
 }
 
 button:hover {
@@ -84,7 +91,9 @@ button:active {
   font-size: 1.5em;
   background-color: blue;
 
-  color: #f9da08;
+  /*color: #f9da08;*/
+  font-weight: bold;
+  color: yellow;
   border-top: 8px solid brown;
   border-bottom: 8px solid brown;
 
@@ -92,14 +101,14 @@ button:active {
 
 }
 h3 {
-  border: 1px solid black;
+
 
   align-self: center;
   color: white;
 
   font-size: 2em;
-  margin: 0px;
-  width: 95%;
+
+
 }
 #points {
   width: 95%;
