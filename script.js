@@ -1,11 +1,12 @@
 
+
 let questionBox = document.getElementById('questionText');
 
 let scoreBox = document.getElementById('points')
 
 let catagoryBox = document.getElementById('catagory');
 
-let submitBox = document.getElementById('submit');
+let submitB = document.getElementById('submitBox');
 
 let answerBox = document.getElementById('answer');
 
@@ -13,9 +14,15 @@ let correctAnswer = document.getElementById('correctAnswer');
 
 let playerScore = document.getElementById('score');
 
-let nextButton = document.getElementById('nextButton');
+let buttonNext = document.getElementById('nextButton');
 
+let resultButton = document.getElementById('result');
 
+let totalScore = 0;
+
+//
+answerBox = answerBox.textContent;
+answerBox.textContent = "";
 // big ole' function...
 function nextP (){
 
@@ -28,37 +35,44 @@ fetch("http://jservice.io/api/random")
         score = `${data[0].value}`;
         catagory = `${data[0].category.title}`;
         answer = `${data[0].answer}`;
-        totalScore = playerScore + scoreBox;
         rightAnswer = `${data[0].answer}`;
         scoreBox.innerHTML = score;
         questionBox.innerHTML = question;
         catagoryBox.innerHTML = catagory;
         correctAnswer.innerHTML = rightAnswer;
-        playerScore.innerHTML += score;
-        }
-      }
-
-//button functions
-submitBox.addEventListener('click', functions() {
-  nextP();
 
 
+      });
+    });
+}
+      //submitBox.addEventListener('click', function( {
 
-})
+
+
 
 //next button new fetch w/ url, class of next button to toggle;
+ buttonNext.addEventListener('click', function( ){
+nextP();
+answerBox.innerHTML = 0;
 
-       });
-       });
+
+ });
+//       });
+  //     });
+
+
+
+
+// If statment for right/ wrong answer
+// if(rightAnswer === answerBox.innerHTML){
+//   score += totalScore;
+//
+// } else{
+//}
+nextP();
+
+
 
 // let questionBox = document.getElementById('questionText');
 // question =`<p> ${[response[0].question} </p>`;
 // questionBox.innerHTML = question;
-
-
-// If statment for right/ wrong answer
-if(rightAnswer === answerBox.innerHTML){
-  score += totalScore;
-
-} else{
-}
