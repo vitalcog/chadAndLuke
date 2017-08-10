@@ -1,5 +1,3 @@
-
-
 let questionBox = document.getElementById('questionText');
 
 let scoreBox = document.getElementById('points')
@@ -20,60 +18,41 @@ let resultButton = document.getElementById('result');
 
 let totalScore = 0;
 
-//
-answerBox = answerBox.textContent;
 answerBox.textContent = "";
 // big ole' function...
-function nextP (){
+function nextP() {
 
-fetch("http://jservice.io/api/random")
-  .then(
-    function(response) {
-      response.json().then(function(data) {
-        console.log(data);
-        question =`<p> ${data[0].question} </p>`;
-        score = `${data[0].value}`;
-        catagory = `${data[0].category.title}`;
-        answer = `${data[0].answer}`;
-        rightAnswer = `${data[0].answer}`;
-        scoreBox.innerHTML = score;
-        questionBox.innerHTML = question;
-        catagoryBox.innerHTML = catagory;
-        correctAnswer.innerHTML = rightAnswer;
+  fetch("http://jservice.io/api/random")
+    .then(
+      function(response) {
+        
+        response.json().then(function(data) {
 
-
+          console.log(data);
+          question = `<p> ${data[0].question} </p>`;
+          score = `${data[0].value}`;
+          catagory = `${data[0].category.title}`;
+          answer = `${data[0].answer}`;
+          rightAnswer = `${data[0].answer}`;
+          scoreBox.innerHTML = score;
+          questionBox.innerHTML = question;
+          catagoryBox.innerHTML = catagory;
+          correctAnswer.innerHTML = rightAnswer;
+        });
       });
-    });
 }
-      //submitBox.addEventListener('click', function( {
+//submit button, cant get this to += to get total play score, also needs to compare answerBox to the right //anwser and display right or wrong
 
+//submitBox.addEventListener('click', function( {
+
+//function that loads webpage once.
 
 nextP();
 
 
-//next button new fetch w/ url, class of next button to toggle;
- buttonNext.addEventListener('click', function( ){
-nextP();
-answerBox.innerHTML = 0;
+//nextButton, class of next button to toggle, needs to clear answerBox and refresh question.
 
-
- });
-//       });
-  //     });
-
-
-
-
-// If statment for right/ wrong answer
-// if(rightAnswer === answerBox.innerHTML){
-//   score += totalScore;
-//
-// } else{
-//}
-nextP();
-
-
-
-// let questionBox = document.getElementById('questionText');
-// question =`<p> ${[response[0].question} </p>`;
-// questionBox.innerHTML = question;
+buttonNext.addEventListener('click', function() {
+  nextP();
+  answerBox.innerHTML = 0;
+});
