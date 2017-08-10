@@ -35,21 +35,21 @@ fetch("http://jservice.io/api/random")
         catagoryBox.innerHTML = catagory;
         correctAnswer.innerHTML = rightAnswer;
         playerScore.innerHTML += score;
-        }
-      }
+      });
+    });
+}
+
+nextP();
 
 //button functions
-submitBox.addEventListener('click', functions() {
-  nextP();
-
-
-
-})
+// submitBox.addEventListener('click', functions() {
+//   nextP();
+// });
 
 //next button new fetch w/ url, class of next button to toggle;
-
-       });
-       });
+       //
+      //  });
+      //  });
 
 // let questionBox = document.getElementById('questionText');
 // question =`<p> ${[response[0].question} </p>`;
@@ -57,8 +57,8 @@ submitBox.addEventListener('click', functions() {
 
 
 // If statment for right/ wrong answer
-if(rightAnswer === answerBox.innerHTML){
-  score += totalScore;
-
-} else{
-}
+// if(rightAnswer === answerBox.innerHTML){
+//   score += totalScore;
+//
+// } else{
+// }
