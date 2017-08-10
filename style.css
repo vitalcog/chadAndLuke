@@ -1,12 +1,13 @@
 body {
   width: 100vw;
-  height: 100vh;
+
   background-color: blue;
 }
 
 #jeopBox {
   background-color: skyblue;
   border-radius: 20px;
+  border: 8px solid brown;
   margin-top: 3%;
   margin-right: auto;
   margin-left: auto;
@@ -20,18 +21,26 @@ body {
   text-align: center;
 }
 
+#jeopBox > * {
+  margin: 0;
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
 #scoreBox {
-  border: 10px solid black;
+  border: 1px solid black;
   display: flex;
-  font-size: 4em;
+  font-size: 2em;
   width: 97%;
   background: blue;
   color: white;
   height: 55%;
+
 }
 
 #scoreLabel {
-  //border: 2px solid black;
+  border: 2px solid black;
   text-align: right;
   width: 20%;
   height: 30px;
@@ -42,7 +51,6 @@ body {
   text-align: center;
   height: 30px;
   width: 40%;
-  margin-left: 150px;
 }
 
 input {
@@ -72,22 +80,23 @@ button:active {
 }
 
 #questionText {
-  margin-left: 5%;
-  margin-right: 5%;
+
   font-size: 1.5em;
   background-color: blue;
-  border-radius: 5px;
+
   color: #f9da08;
-  border: 10px solid black;
-  margin: 0px 0px 40px;
+  border-top: 8px solid brown;
+  border-bottom: 8px solid brown;
+
+
 
 }
 h3 {
-  border: 10px solid black;
-  padding: 10px;
+  border: 1px solid black;
+
   align-self: center;
   color: white;
-  background: blue;
+
   font-size: 2em;
   margin: 0px;
   width: 95%;
