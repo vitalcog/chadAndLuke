@@ -13,7 +13,12 @@ let correctAnswer = document.getElementById('correctAnswer');
 
 let playerScore = document.getElementById('score');
 
+let nextButton = document.getElementById('nextButton');
+
+
 // big ole' function...
+function nextP (){
+
 fetch("http://jservice.io/api/random")
   .then(
     function(response) {
@@ -25,19 +30,23 @@ fetch("http://jservice.io/api/random")
         answer = `${data[0].answer}`;
         totalScore = playerScore + scoreBox;
         rightAnswer = `${data[0].answer}`;
-        //playerScore.innerHTML = score;
-        //scorebox.innerHTML = totalScore;
         scoreBox.innerHTML = score;
         questionBox.innerHTML = question;
         catagoryBox.innerHTML = catagory;
-        //scoreBox.innerHTML = playerScore;
         correctAnswer.innerHTML = rightAnswer;
         playerScore.innerHTML += score;
-  // If statment for right/ wrong answer
-if(rightAnswer === answerBox.innerHTML){
-  score += totalScore;
+        }
+      }
 
-} else{playerScore }
+//button functions
+submitBox.addEventListener('click', functions() {
+  nextP();
+
+
+
+})
+
+//next button new fetch w/ url, class of next button to toggle;
 
        });
        });
@@ -45,3 +54,11 @@ if(rightAnswer === answerBox.innerHTML){
 // let questionBox = document.getElementById('questionText');
 // question =`<p> ${[response[0].question} </p>`;
 // questionBox.innerHTML = question;
+
+
+// If statment for right/ wrong answer
+if(rightAnswer === answerBox.innerHTML){
+  score += totalScore;
+
+} else{
+}
