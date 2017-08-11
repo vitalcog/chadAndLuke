@@ -22,6 +22,17 @@ body {
   text-align: center;
 }
 
+@font-face {
+    font-family: gyparody hv;
+    src: url('gyparody hv.ttf');
+}
+
+#title {
+  font-size: 3.8em;
+  font-family: gyparody hv;
+  color: gray;
+}
+
 #jeopBox > * {
   margin: 0;
   padding: 0;
@@ -103,7 +114,7 @@ button:active {
 
 #questionText {
 
-  font-size: 1.5em;
+  font-size: 1.8em;
   background-color: blue;
 
   /*color: #f9da08;*/

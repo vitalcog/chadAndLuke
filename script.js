@@ -1,5 +1,3 @@
-
-
 let questionBox = document.getElementById('questionText');
 
 let scoreBox = document.getElementById('points')
@@ -20,60 +18,50 @@ let resultButton = document.getElementById('result');
 
 let totalScore = 0;
 
-//
-answerBox = answerBox.textContent;
 answerBox.textContent = "";
 // big ole' function...
-function nextP (){
+function nextP() {
+console.log(answerBox.value);
+console.log(correctAnswer.innerHTML)
+  fetch("http://jservice.io/api/random")
+    .then(
+      function(response) {
 
-fetch("http://jservice.io/api/random")
-  .then(
-    function(response) {
-      response.json().then(function(data) {
-        console.log(data);
-        question =`<p> ${data[0].question} </p>`;
-        score = `${data[0].value}`;
-        catagory = `${data[0].category.title}`;
-        answer = `${data[0].answer}`;
-        rightAnswer = `${data[0].answer}`;
-        scoreBox.innerHTML = score;
-        questionBox.innerHTML = question;
-        catagoryBox.innerHTML = catagory;
-        correctAnswer.innerHTML = rightAnswer;
+        response.json().then(function(data) {
 
+          console.log(data);
+          question = `<p> ${data[0].question} </p>`;
+          score = `${data[0].value}`;
+          catagory = `${data[0].category.title}`;
+          answer = `${data[0].answer}`;
+          rightAnswer = `${data[0].answer}`;
+          scoreBox.innerHTML = score;
+          questionBox.innerHTML = question;
+          catagoryBox.innerHTML = catagory;
 
+        });
       });
-    });
 }
-      //submitBox.addEventListener('click', function(
-
-buttonNext.addEventListener('click', function() {
-nextP();
-//answerBox.innerHTML = 0;
-});
-
-
-nextP();
-
-
-//next button new fetch w/ url, class of next button to toggle;
-
-//       });
-  //     });
+//submit button, cant get this to += to get total play score.
+//Its comparing the two but because we are entering the text i dont its reading it correctly, maybe its //location of code... I dunno.
+  submitBox.addEventListener('click', function() {
+  if(answerBox.value === correctAnswer.innerHTML){
+    return resultButton.innerHTML = 'Right!!'
+  }else {
+    return correctAnswer.innerHTML = rightAnswer;
+  }
+})
+//function that loads webpage once.
 
 
 
+//buttonNext is clearing the answerBox and refreshing the question, still acting a little wonky in other states
+// Its not clearing the correctAnswer either
+ buttonNext.addEventListener('click', function() {
+   return answerBox.value = '';
+    resultButton.innerHTML = '';
+    return correctAnswer.innerHTML = '';
+    nextP();
+ })
 
-// If statment for right/ wrong answer
-// if(rightAnswer === answerBox.innerHTML){
-//   score += totalScore;
-//
-// } else{
-//}
-nextP();
-
-
-
-// let questionBox = document.getElementById('questionText');
-// question =`<p> ${[response[0].question} </p>`;
-// questionBox.innerHTML = question;
+ nextP();
