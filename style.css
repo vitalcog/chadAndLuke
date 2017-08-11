@@ -1,7 +1,8 @@
 body {
   width: 100vw;
 
-  background-color: blue;
+  background-image: url(jeopardy_logo_bground.jpg);
+  background-size: 15%;
 }
 
 #jeopBox {
@@ -42,7 +43,7 @@ body {
 #scoreLabel {
   margin-top: 1%;
   margin-bottom: 1%;
-  margin-right: 3%;
+  margin-right: 5%;
   color: yellow;
   font-weight: bold;
   text-align: right;
@@ -58,7 +59,7 @@ body {
   font-weight: bold;
   text-align: left;
   height: 40px;
-  width: 50%;
+  width: 48%;
 }
 
 input {

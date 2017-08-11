@@ -45,19 +45,19 @@ fetch("http://jservice.io/api/random")
       });
     });
 }
-      //submitBox.addEventListener('click', function( {
+      //submitBox.addEventListener('click', function(
+
+buttonNext.addEventListener('click', function() {
+nextP();
+//answerBox.innerHTML = 0;
+});
 
 
 nextP();
 
 
 //next button new fetch w/ url, class of next button to toggle;
- buttonNext.addEventListener('click', function( ){
-nextP();
-answerBox.innerHTML = 0;
 
-
- });
 //       });
   //     });
 
