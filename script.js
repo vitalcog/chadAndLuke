@@ -18,7 +18,7 @@ let resultButton = document.getElementById('result');
 
 let totalScore = 0;
 
-answerBox.textContent = "";
+//answerBox.textContent = "";
 // big ole' function...
 function nextP() {
 console.log(answerBox.value);
@@ -46,9 +46,9 @@ console.log(correctAnswer.innerHTML)
 //Its comparing the two but because we are entering the text i dont its reading it correctly, maybe its //location of code... I dunno.
   submitBox.addEventListener('click', function() {
   if(answerBox.value === correctAnswer.innerHTML){
-    return resultButton.innerHTML = 'Right!!'
-  }else {
-    return correctAnswer.innerHTML = rightAnswer;
+     resultButton.innerHTML = 'Right!!'
+  } else {
+     correctAnswer.innerHTML = rightAnswer;
   }
 })
 //function that loads webpage once.
@@ -58,10 +58,10 @@ console.log(correctAnswer.innerHTML)
 //buttonNext is clearing the answerBox and refreshing the question, still acting a little wonky in other states
 // Its not clearing the correctAnswer either
  buttonNext.addEventListener('click', function() {
-   return answerBox.value = '';
-    resultButton.innerHTML = '';
-    return correctAnswer.innerHTML = '';
-    nextP();
+      answerBox.value = '';
+     resultButton.innerHTML = '';
+      correctAnswer.innerHTML = '';
+    return nextP();
  })
 
  nextP();
